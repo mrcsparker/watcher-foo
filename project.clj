@@ -1,10 +1,12 @@
 (defproject watcher-foo "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Watching files"
+  :url "http://github.com/mrcsparker/watcher-foo"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :main watcher-foo.core
+  :main ^:skip-aot watcher-foo.core
+  :target-path "target/%s"
+  :profiles {:uberjar {:aot :all}}
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [clojure-watch "LATEST"]
                  [yesql "0.4.2"]
